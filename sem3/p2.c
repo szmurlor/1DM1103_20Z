@@ -9,7 +9,7 @@ int main(int argc, char *argv[]) {
     char *n3;
     char tab[10][10];
 
-    strcpy(tab[0], "akuku");
+    strncpy(tab[0], "akuku", 9);
     strcpy(tab[1], "hello");
     strcpy(n, "Ala");
     // n2 = "Nowego napisu!";
@@ -20,6 +20,7 @@ int main(int argc, char *argv[]) {
     }
 
     printf("Trzeci znak z pierwszego napisu argv: %c\n", argv[0][2]);
+    printf("Trzeci znak z drugiego napisu argv: %c\n", argv[1][2]);
 
     return 0;
 }
