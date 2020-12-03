@@ -58,6 +58,16 @@ SBaza * zapisz_baze(char *nazwa_pliku, SBaza * baza) {
     return NULL;
 }
 
+int ile_studentow(SBaza *baza) {
+    int n = 0;
+    Student * stud = baza->lista_studentow;
+    while (stud != NULL) {
+        n++;
+        stud = stud->nast;
+    }
+    return n;
+}
+
 void listuj_studentow(SBaza *baza) {
     Student * stud = baza->lista_studentow;
     while (stud != NULL) {
